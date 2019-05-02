@@ -1,0 +1,44 @@
+并发模型
+程序使用Reactor模型, MainReactor主循环负责新连接的分发,subReactor子循环负责一定数量描述符的IO事件;
+
+关键类:
+Channel类:
+它对应于Reactor模式中的一个事件, 每一个Channel对像自始至终都只属于一个IO线程;一个channel对象负责一个文件描述如的IO事件,
+Channel对象中利用c++11的模板类和bind注册了文件描述符的回调函数.
+
+Epoll类:
+对epoll进行了封装,返回活动事件
+
+(通过fd可以找到Channel对象, HttpData对象)
+
+EventLoop类:
+    每一个线程只有一个EventLoop对象, EventLoop是时间循环,每次从epoll中得到活跃的事件,并且调用Channel对象中的回调函数
+进行处理;
+
+Timer设计:
+    处理长事件不活跃的连接,使用STL的优先队列,一个连接刚刚有处理,申请一个新的Timer节点,将原来的节点懒惰删除,被删除的节点只有等到
+它前面的节点节点被删除,它才会被真正删除
+
+EventLoopThread封装EventLoop, EventLoopThreadPool提供子线程的loop给主线程分配任务.
+
+
+压力测试结果：
+测试方法：简单的回射hello
+1000个客户  60s  
+长连接 900万请求， 没有失败
+短连接 300多万请求 ，会有20到30个失败的，
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

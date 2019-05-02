@@ -1,0 +1,6 @@
+/home/hejilin/code/httpserver/base/CMakeFiles/rebuild_cache.dir
+/home/hejilin/code/httpserver/base/CMakeFiles/libserver_base.dir
+/home/hejilin/code/httpserver/base/CMakeFiles/edit_cache.dir
+/home/hejilin/code/httpserver/base/tests/CMakeFiles/rebuild_cache.dir
+/home/hejilin/code/httpserver/base/tests/CMakeFiles/LoggingTest.dir
+/home/hejilin/code/httpserver/base/tests/CMakeFiles/edit_cache.dir

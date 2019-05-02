@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>数独求解器</title>
+        <meta charset="utf-8"/>
+        <style>
+            input{  size: 15; width: 50; height: 50;
+                    text-align: center;
+                    font-size: 30px;
+                    padding: 0px;
+            }
+
+            form{
+                text-align: center;
+                font-size: 0px;
+                }
+            h1{ text-align: center;
+                padding-top: 150px;    
+            }
+
+        </style>
+    </head>
+
+    <body>
+                
+        <h1>数独求解器</h1>
+        <form method="POST">
+            <input name="input"; name="input"; value="-"; style="border-top: 3px solid; border-left: 3px solid; "/> 
+            <input name="input"; name="input"; value="-"; style="border-top: 3px solid; "/> 
+            <input name="input"; name="input"; value="-"; style="border-top: 3px solid; border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style="border-top: 3px solid; border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style="border-top: 3px solid; "/> 
+            <input name="input"; name="input"; value="-"; style="border-top: 3px solid; border-right: 1.5px solid;"/>  
+            <input name="input"; name="input"; value="-"; style="border-top: 3px solid; border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style="border-top: 3px solid; "/> 
+            <input name="input"; name="input"; value="-"; style="border-top: 3px solid; border-right: 3px solid;"/>  
+            <br />
+            <input name="input"; name="input"; value="-"; style=" border-left: 3px solid; "/> 
+            <input name="input"; name="input"; value="-"; /> 
+            <input name="input"; name="input"; value="-"; style=" border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; /> 
+            <input name="input"; name="input"; value="-"; style=" border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; /> 
+            <input name="input"; name="input"; value="-"; style=" border-right: 3px solid;"/> 
+            <br />
+            <input name="input"; name="input"; value="-"; style=" border-left: 3px solid; border-bottom: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid; border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid; border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid; border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid; border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid; border-right: 3px solid;"/> 
+            <br />
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid; border-left: 3px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid; border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid; border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid; border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid; border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid; border-right: 3px solid;"/> 
+            <br />
+            <input name="input"; name="input"; value="-"; style=" border-left: 3px solid; "/> 
+            <input name="input"; name="input"; value="-"; /> 
+            <input name="input"; name="input"; value="-"; style=" border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; /> 
+            <input name="input"; name="input"; value="-"; style=" border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; /> 
+            <input name="input"; name="input"; value="-"; style=" border-right: 3px solid;"/> 
+            <br />
+            <input name="input"; name="input"; value="-"; style=" border-left: 3px solid; border-bottom: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid; border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid; border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid; border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid; border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 1.5px solid; border-right: 3px solid;"/>  
+            <br />
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid; border-left: 3px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid; border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid; border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid; border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid; border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-top: 1.5px solid; border-right: 3px solid;"/>  
+            <br />
+            <input name="input"; name="input"; value="-"; style=" border-left: 3px solid; "/> 
+            <input name="input"; name="input"; value="-"; /> 
+            <input name="input"; name="input"; value="-"; style=" border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; /> 
+            <input name="input"; name="input"; value="-"; style=" border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; /> 
+            <input name="input"; name="input"; value="-"; style=" border-right: 3px solid;"/> 
+            <br />
+            <input name="input"; name="input"; value="-"; style="  border-bottom: 3px solid; border-left: 3px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 3px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 3px solid; border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 3px solid; border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 3px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 3px solid; border-right: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 3px solid; border-left: 1.5px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 3px solid;"/> 
+            <input name="input"; name="input"; value="-"; style=" border-bottom: 3px solid; border-right: 3px solid;"/> 
+            <br/>
+            <input type="submit"; value="求解"; style="font-size: 15px; height:30px; width:80px; left: 200; top: 10; position: relative; display:inline-block;"/>
+            <input type="text"; value="            "; style="font-size: 15px; height:30px; width:120px; right: 200; top: 10; position: relative; display:inline-block;"/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+/usr/bin/c++   -O0 -Wall -g2 -ggdb  -rdynamic CMakeFiles/LoggingTest.dir/LoggingTest.o  -o LoggingTest  -L/home/hejilin/code/httpserver/tests/base ../libserver_base.a -lpthread -lrt 
